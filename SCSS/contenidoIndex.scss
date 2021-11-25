@@ -1,0 +1,97 @@
+/*Contenido Index*/
+
+.titulos {
+    padding-top: 6em;
+    margin: 0%;
+}
+
+.contenedor {
+    .contenedorDos {
+        height: 100%;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        .contenedor__contenedorDos__cajas {
+            margin: 2px;
+            width: 18em;
+            height: 19em;
+            align-items: center;
+            border: solid rgb(218, 189, 61) 3px;
+            border-radius: 5px;
+            .contenedor__contenedorDos__cajas__enlace {
+                .contenedor__contenedorDos__cajas__enlace__imagen {
+                    width: 100%;
+                    height: 16em;
+                }
+                .contenedor__contenedorDos__cajas__enlace__animales {
+                    text-align: center;
+                    width: 100%;
+                    height: 2.7em;
+                    padding-top: 0.63em;
+                }
+                .contenedor__contenedorDos__cajas__enlace___animales:hover{
+                    color: black;
+                }
+            }
+        }
+        .contenedor__contenedorDos__cajas:hover {
+            transform: scale(1.05);
+            background: linear-gradient(rgb(218, 189, 61), rgb(255,255,255) 10%);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1030px) {
+    .contenedor__contenedorDos {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contenedor__contenedorDos__cajas {
+        width: 30em;
+        height: 30em;
+    }
+}
+ 
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@for $i from 1 through 3 {
+    h#{$i} {
+        font: 3em / $i; 
+    }
+}
+
+$ancho: 720px;
+
+$mobile: 580px;
+$tablet: 992;
+
+body {
+    @if $ancho > $mobile {
+        background-color: white;  
+    } @else if $ancho > $tablet {
+        background-color: grey;
+    } 
+    @else {
+        background-color: rgb(218, 189, 61);
+    }
+
+}
+
+
+
